@@ -1,6 +1,7 @@
 require_relative 'bike'
 
 class DockingStation
+
   attr_reader :bike
 
   def release_bike
@@ -11,5 +12,7 @@ class DockingStation
     @bike = bike
   end
 
-  attr_reader :bike
+  def available?(docking_station)
+    raise 'Bike Unavailable!'
+  end
 end

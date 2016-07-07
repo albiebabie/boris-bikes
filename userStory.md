@@ -38,5 +38,19 @@ I want to see a bike that has been docked
 |-----------------|------------------|
 | Bike            | Hire             |
 | Bike            | Return_bike      |
-| Bike            | Dock?             |
-| Docking Station |      |
+| Bike            | Dock?            |
+| Docking Station |                  |
+
+## User Stories for not releasing bike if empty ##
+
+As a member of the public,
+So that I am not confused and charged unnecessarily,
+I'd like docking stations not to release bikes when there are none available.
+
+
+| Objects         | Messages         |
+|-----------------|------------------|
+| Docking Stations| release_bike     |
+| Bikes           | available?       |
+|                 |                  |
+|                 |                  |
