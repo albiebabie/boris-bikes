@@ -23,3 +23,20 @@ person <-- ride_bike? --> true/false
 bike <-- works? --> true/false
 docking station <-- release_bike --> true/false
 ```
+
+## User Stories for docking bikes ##
+
+As a member of the public
+So I can return bikes I've hired
+I want to dock my bike at the docking station
+
+As a member of the public
+So I can decide whether to use the docking station
+I want to see a bike that has been docked
+
+| Objects         | Messages         |
+|-----------------|------------------|
+| Bike            | Hire             |
+| Bike            | Return_bike      |
+| Bike            | Dock?             |
+| Docking Station |      |
