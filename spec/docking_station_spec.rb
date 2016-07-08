@@ -27,6 +27,6 @@ describe DockingStation do
 
   it 'should raise' do
     docking_station = DockingStation.new
-    expect{subject.available?(docking_station)}.to raise_error("Bike Unavailable!")
+    expect{subject.release_bike}.to raise_error("Bike Unavailable!")
   end
 end
