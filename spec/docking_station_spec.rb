@@ -13,7 +13,8 @@ describe DockingStation do
   end
 
   it 'releases working bike' do
-    bike = subject.release_bike
+    bike = Bike.new
+    subject.dock(bike)
     expect(bike).to be_working
   end
 
