@@ -27,8 +27,8 @@ describe DockingStation do
   end
 
   describe 'setting capacity' do
-    it "takes one argument" do
-      is_expected.to respond_to(:new).with(1).argument
+    it "has a default capacity" do
+      expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
     end
   end
 
