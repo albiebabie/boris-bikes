@@ -26,6 +26,12 @@ describe DockingStation do
     expect(subject.bikes).to include bike
   end
 
+  describe 'setting capacity' do
+    it "takes one argument" do
+      is_expected.to respond_to(:new).with(1).argument
+    end
+  end
+
   describe '#release_bike' do
     it 'releases working bike' do
       bike = Bike.new
