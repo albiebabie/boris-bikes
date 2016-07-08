@@ -13,21 +13,28 @@ describe DockingStation do
       expect(subject.dock(bike)).to include bike
     end
     it 'should raise an error if no space' do
-      DockingStation::DEFAULT_CAPACITY.times { subject.dock(Bike.new) }
+      subject.capacity.times { subject.dock(Bike.new) }
       expect { subject.dock(Bike.new) }.to raise_error('No spaces available')
+    end
+    it 'should set the capacity if there is an arguement' do
+      docking_station = DockingStation.new(30)
+      30.times { docking_station.dock(Bike.new) }
+      expect { docking_station.dock(Bike.new) }.to raise_error('No spaces available')
     end
   end
 
-  it { is_expected.to respond_to(:bikes) }
+  # Not testing for private method from 17 onwards
 
-  it 'returns docked bikes' do
-    bike = Bike.new
-    subject.dock(bike)
-    expect(subject.bikes).to include bike
-  end
+  # it { is_expected.to respond_to(:bikes) }
+
+  # it 'returns docked bikes' do
+  #   bike = Bike.new
+  #   subject.dock(bike)
+  #   expect(subject.bikes).to include bike
+  # end
 
   describe 'setting capacity' do
-    it "has a default capacity" do
+    it 'has a default capacity' do
       expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
     end
   end
