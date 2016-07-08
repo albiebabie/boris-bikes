@@ -13,6 +13,7 @@ describe DockingStation do
       expect(subject.dock(bike)).to eq bike
     end
     it 'should raise an error if no space' do
+      subject.dock(Bike.new)
       expect { subject.dock(Bike.new) }.to raise_error('No spaces available')
     end
   end
